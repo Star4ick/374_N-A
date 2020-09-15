@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="wind">
+    <property name="can_focus">False</property>
+    <property name="default_width">200</property>
+    <property name="default_height">200</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkLabel" id="lab">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">ANSON_474</property>
+        <attributes>
+          <attribute name="font-desc" value="UKIJ Kufi 3D Bold Italic 27"/>
+          <attribute name="style" value="normal"/>
+          <attribute name="weight" value="book"/>
+        </attributes>
+      </object>
+    </child>
+  </object>
+</interface>
