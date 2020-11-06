@@ -6,7 +6,7 @@
     <columns>
       <!-- column-name Account -->
       <column type="gchararray"/>
-      <!-- column-name Money -->
+      <!-- column-name Cash -->
       <column type="gint"/>
       <!-- column-name Avatar -->
       <column type="GdkPixbuf"/>

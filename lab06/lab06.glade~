@@ -2,7 +2,7 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <object class="GtkListStore" id="store_list">
+  <object class="GtkListStore" id="store_items">
     <columns>
       <!-- column-name Account -->
       <column type="gchararray"/>
@@ -26,7 +26,7 @@
           <object class="GtkTreeView" id="list_items">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="model">store_list</property>
+            <property name="model">store_items</property>
             <property name="enable_grid_lines">both</property>
             <child internal-child="selection">
               <object class="GtkTreeSelection"/>

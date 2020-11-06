@@ -22,15 +22,19 @@ ui.list_items:append_column(c1)
 ui.list_items:append_column(c2)
 ui.list_items:append_column(c3)
 
-db = sqlite.open('lab06.db')
-
-for row in db:nrows('SELECT * FROM game') do
-px = pixbuf.new_from_file(row.avatar)
-
+local base = 'lab06'
+local sql = 'SELECT * FROM game'
+f = io.popen('sqlite3 ' .. base .. '.db "' .. sql .. '"')
+while true do
+local row = f:read('*l')
+print(row)
+if row == nil then break end
+local _, _, account, cash, avatar = row:find('(%w+)|(%d+)|(,-)$')
+px = pixbuf.new_from_file(avatar)
 el = ui.store_items:append()
-ui.store_items[el] = {[1] = row.account, [2] = row.cash, [3] = px}
+ui.store_items[el] = {[1] = account, [2] = cash, [3] = px}
 end
-db:close()
+f:close()
 ui.wnd.title='lab-06_Anson474'
 ui.wnd.on_destroy=gtk.main_quit
 ui.wnd:show_all()
