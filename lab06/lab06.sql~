@@ -4,9 +4,7 @@ DROP TABLE IF EXISTS language;
 
 CREATE TABLE employee (id INT IDENTITY(1,1) PRIMARY KEY NOT NULL, name TEXT, surname TEXT);
 CREATE TABLE language (id INT IDENTITY(1,1) PRIMARY KEY NOT NULL, language_program_type TEXT)
-CREATE TABLE mapping (id INT IDENTYTY(1,1) PRIMARY KEY NOT NULL, id_employee INT, id_language INT,
-CONSTRAINT FK_EMP_MAP FOREIGN KEY (id_employee) REFERENCES employee (id),
-CONSTRAINT FK_LANG_MAP FOREIGN KEY (id_language) REFERENCES language (id))
+CREATE TABLE mapping (id INT IDENTYTY(1,1) PRIMARY KEY NOT NULL, id_employee INT, id_language INT)
 
 INSERT INTO employee VALUES (	, Aleksandr		, Anson);
 INSERT INTO employee VALUES (	, Vladislav		, Kimasov);
